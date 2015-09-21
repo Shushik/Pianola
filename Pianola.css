@@ -1,0 +1,302 @@
+.pianola
+{
+    display: inline-block;
+
+    margin: 0;
+}
+
+.pianola .title
+{
+    font: normal 18px/20px Times, serif;
+
+    display: block;
+
+    margin: 0 0 5px 0;
+}
+
+.pianola .octave
+{
+    display: inline-block;
+
+    margin: 0;
+}
+
+.pianola .notes
+{
+    white-space: nowrap;
+
+    display: inline-block;
+
+    margin: 0;
+
+    border-color: rgb(62, 46, 27);
+    border-style: solid;
+    border-width: 1px 0 0 0;
+}
+
+.pianola .note
+{
+    font: normal 10px/12px Verdana, Arial, sans-serif;
+
+    line-height:    14px;
+    text-align:     center;
+    vertical-align: top;
+
+    display:  inline-block;
+    position: relative;
+    z-index:  1;
+
+    margin: 0 0 0 0;
+
+    border-color:               rgb(62, 46, 27);
+    border-style:               solid;
+    border-width:               0 1px 1px 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius:  3px;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    box-sizing:         border-box;
+}
+
+.pianola.small .note
+{
+    font-size: 8px;
+
+    line-height: 10px;
+}
+
+.pianola .octave:first-child .note:first-child
+{
+    border-left-width: 1px;
+}
+
+.pianola .note:before,
+body .pianola.large .note:before
+{
+    content: "";
+}
+
+.pianola .note:before
+{
+    display:  block;
+    position: absolute;
+    top:      0;
+    right:    0;
+    bottom:   0;
+    left:     0;
+
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius:  3px;
+}
+
+.pianola .note.A,
+.pianola .note.B,
+.pianola .note.C,
+.pianola .note.D,
+.pianola .note.E,
+.pianola .note.F,
+.pianola .note.G,
+.pianola .note.C♭,
+.pianola .note.F♭,
+.pianola .note.B♯,
+.pianola .note.E♯
+{
+    width:  20px;
+    height: 75px;
+
+    color:            rgb(62, 46, 27);
+    background-color: rgb(255, 248, 219);
+}
+
+.pianola.large .note.A,
+.pianola.large .note.B,
+.pianola.large .note.C,
+.pianola.large .note.D,
+.pianola.large .note.E,
+.pianola.large .note.F,
+.pianola.large .note.G,
+.pianola.large .note.C♭,
+.pianola.large .note.F♭,
+.pianola.large .note.B♯,
+.pianola.large .note.E♯
+{
+    width:  40px;
+    height: 150px;
+}
+
+.pianola .note.A.active:before,
+.pianola .note.B.active:before,
+.pianola .note.C.active:before,
+.pianola .note.D.active:before,
+.pianola .note.E.active:before,
+.pianola .note.F.active:before,
+.pianola .note.G.active:before,
+.pianola .note.C♭.active:before,
+.pianola .note.F♭.active:before,
+.pianola .note.B♯.active:before,
+.pianola .note.E♯.active:before
+{
+    background-color: rgba(62, 46, 27, 0.2);
+    background-color: rgba(0, 255, 0, 0.4);
+}
+
+.pianola .note.A♭,
+.pianola .note.B♭,
+.pianola .note.D♭,
+.pianola .note.E♭,
+.pianola .note.G♭,
+.pianola .note.A♯,
+.pianola .note.C♯,
+.pianola .note.D♯,
+.pianola .note.F♯,
+.pianola .note.G♯
+{
+    z-index: 2;
+
+    width:  10px;
+    height: 45px;
+    margin: 0 -5px;
+
+    color:             rgb(255, 248, 219);
+    background-color:  rgb(62, 46, 27);
+    border-left-width: 1px;
+}
+
+.pianola.large .note.A♭,
+.pianola.large .note.B♭,
+.pianola.large .note.D♭,
+.pianola.large .note.E♭,
+.pianola.large .note.G♭,
+.pianola.large .note.A♯,
+.pianola.large .note.C♯,
+.pianola.large .note.D♯,
+.pianola.large .note.F♯,
+.pianola.large .note.G♯
+{
+    width:  20px;
+    height: 95px;
+    margin: 0 -10px;
+}
+
+.pianola .note.A♭.active:before,
+.pianola .note.B♭.active:before,
+.pianola .note.D♭.active:before,
+.pianola .note.E♭.active:before,
+.pianola .note.G♭.active:before,
+.pianola .note.A♯.active:before,
+.pianola .note.C♯.active:before,
+.pianola .note.D♯.active:before,
+.pianola .note.F♯.active:before,
+.pianola .note.G♯.active:before
+{
+    background-color: rgba(255, 248, 219, 0.5);
+    background-color: rgba(0, 255, 0, 0.7);
+}
+
+/*
+.pianola .note.A:before
+{
+    content: "A";
+}
+
+.pianola .note.B:before
+{
+    content: "B";
+}
+
+.pianola .note.C:before
+{
+    content: "C";
+}
+
+.pianola .note.D:before
+{
+    content: "D";
+}
+
+.pianola .note.E:before
+{
+    content: "E";
+}
+
+.pianola .note.F:before
+{
+    content: "F";
+}
+
+.pianola .note.G:before
+{
+    content: "G";
+}
+
+.pianola .note.C♭:before
+{
+    content: "C♭";
+}
+
+.pianola .note.F♭:before
+{
+    content: "F♭";
+}
+
+.pianola .note.B♯:before
+{
+    content: "B♯";
+}
+
+.pianola .note.E♯:before
+{
+    content: "E♯";
+}
+
+.pianola .note.A♭:before
+{
+    content: "A♭";
+}
+
+.pianola .note.B♭:before
+{
+    content: "B♭";
+}
+
+.pianola .note.D♭:before
+{
+    content: "D♭";
+}
+
+.pianola .note.E♭:before
+{
+    content: "E♭";
+}
+
+.pianola .note.G♭:before
+{
+    content: "G♭";
+}
+
+.pianola .note.A♯:before
+{
+    content: "A♯";
+}
+
+.pianola .note.C♯:before
+{
+    content: "C♯";
+}
+
+.pianola .note.D♯:before
+{
+    content: "D♯";
+}
+
+.pianola .note.F♯:before
+{
+    content: "F♯";
+}
+
+.pianola .note.G♯:before
+{
+    content: "G♯";
+}
+*/

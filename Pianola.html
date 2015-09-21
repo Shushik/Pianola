@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Pianola.css">
+
+    <title>Harmony Is The Key</title>
+</head><body class="page">
+
+    <div class="example"></div>
+
+    <script type="text/javascript" src="Harmony.class.js"></script>
+    <script type="text/javascript" src="Pianola.class.js"></script>
+    <script type="text/javascript">
+        window.onload = function() {
+            Pianola('.example', {octaves : 2}).
+            save(Harmony.scale('G'), {delay : 0.3}).
+            save(null, {delay : 1}).
+            save([Harmony.chord('G')], {delay : 0.5}).
+            save([Harmony.chord('C')], {delay : 0.5}).
+            save([Harmony.chord('D7')], {delay : 0.5}).
+            save([Harmony.chord('G')], {delay : 0.5}).
+            save(null, {delay : 1}).
+            save(Harmony.scale('Em'), {delay : 0.3}).
+            save(null, {delay : 1}).
+            save([Harmony.chord('Em')], {delay : 0.5}).
+            save([Harmony.chord('Am')], {delay : 0.5}).
+            save([Harmony.chord('B7')], {delay : 0.5}).
+            save([Harmony.chord('Em')], {delay : 0.5}).
+            play();
+        }
+    </script>
+
+</body></html>
